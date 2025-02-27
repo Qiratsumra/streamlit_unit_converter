@@ -62,28 +62,32 @@ if category == "Distance":
     to_unit = st.selectbox("To", units)
     value = st.number_input("Enter Value")
     result = distance_converter(from_unit, to_unit, value)
-    st.write(f"<p style='font-size:24px;'>{value} {from_unit} is equal to {result:.2f} {to_unit}</p>", unsafe_allow_html=True)
+    if st.button('Convert') and st.balloons():
+     st.write(f"<p style='font-size:24px;'>{value} {from_unit} is equal to {result:.2f} {to_unit}</p>", unsafe_allow_html=True)
 
 elif category == "Temperature":
     from_unit = st.selectbox("From", ["Celsius", "Fahrenheit"])
     to_unit = st.selectbox("To", ["Celsius", "Fahrenheit"])
     value = st.number_input("Enter Value")
     result = temperature_converter(from_unit, to_unit, value)
-    st.write(f"<p style='font-size:24px;'>{value} {from_unit} is equal to {result:.2f} {to_unit}</p>", unsafe_allow_html=True)
+    if st.button('Convert') and st.balloons():
+     st.write(f"<p style='font-size:24px;'>{value} {from_unit} is equal to {result:.2f} {to_unit}</p>", unsafe_allow_html=True)
 
 elif category == "Weight":
     from_unit = st.selectbox("From", ["Kilograms", "Grams", "Pounds", "Ounces"])
     to_unit = st.selectbox("To", ["Kilograms", "Grams", "Pounds", "Ounces"])
     value = st.number_input("Enter Value")
     result = weight_converter(from_unit, to_unit, value)
-    st.write(f"<p style='font-size:24px;'>{value} {from_unit} is equal to {result:.2f} {to_unit}</p>", unsafe_allow_html=True)
+    if st.button('Convert') and st.balloons():
+     st.write(f"<p style='font-size:24px;'>{value} {from_unit} is equal to {result:.2f} {to_unit}</p>", unsafe_allow_html=True)
 
 elif category == "Pressure":
     from_unit = st.selectbox("From", ["Pascals", "Hectopascals", "Kilopascals", "Bar"])
     to_unit = st.selectbox("To", ["Pascals", "Hectopascals", "Kilopascals", "Bar"])
     value = st.number_input("Enter Value")
     result = pressure_converter(from_unit, to_unit, value)
-    st.write(f"<p style='font-size:24px;'>{value} {from_unit} is equal to {result:.2f} {to_unit}</p>", unsafe_allow_html=True)
+    if st.button('Convert') and st.balloons():
+     st.write(f"<p style='font-size:24px;'>{value} {from_unit} is equal to {result:.2f} {to_unit}</p>", unsafe_allow_html=True)
 
 st.write('-------------------------------------------------')
 st.caption('©️ 2025 Unit Converter By Qirat Saeed. All rights reserved.')
