@@ -48,6 +48,7 @@ def pressure_converter(from_unit, to_unit, value):
     return value * units[from_unit] / units[to_unit]
 
 # Streamlit UI (fixed distance unit options)
+st.set_page_config(page_title='Unit Converter', page_icon='🔢')
 st.title("Unit Converter")
 
 category = st.selectbox("Select Category", ["Distance", "Temperature", "Weight", "Pressure"])
